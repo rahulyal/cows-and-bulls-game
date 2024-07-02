@@ -1,6 +1,6 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
-// import StatsCard from '../cards/StatsCard';
+import StatsCard from '../cards/StatsCard';
 import { useAuth } from '../contexts/AuthContext';
 import UserGameCard from '../cards/UserGameCard';
 import UserStatsCard from '../cards/UserStatsCard';
@@ -32,7 +32,7 @@ const UserHomePage = () => {
                     <UserGameCard />
                 </div>
                 <div className="w-full md:w-2/5 px-2">
-                    <UserStatsCard />
+                    <StatsCard />
                 </div>
             </div>
         </div>

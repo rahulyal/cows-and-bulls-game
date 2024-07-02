@@ -8,6 +8,8 @@ import MultOppGameCard from '../cards/MultOppGameCard';
 // import MultiplayerGameBoard from '../cards/MultGameCard';
 // import SecretInput from '../components/SecretInput';
 
+const API_URL = import.meta.env.VITE_API_URL;
+
 const MultGamePage = () => {
     const { user } = useAuth();
     const { gameId, inviteCode } = useParams();
@@ -25,7 +27,7 @@ const MultGamePage = () => {
     });
 
     useEffect(() => {
-        const newSocket = io('http://localhost:5000');
+        const newSocket = io(API_URL);
         setSocket(newSocket);
 
         newSocket.on('connect', () => {
